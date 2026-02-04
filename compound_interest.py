@@ -12,6 +12,7 @@
 # compound interest = p * (1 + r/100)^t
  # Here is a new update by <your GitHub username>
 
+# Here is another update by <your GitHub username>
 def compound_interest(p, t, r):
     return p * (pow((1 + r / 100), t))
 
