@@ -1,0 +1,34 @@
+$ git checkout bug-fix-typo
+Switched to branch 'bug-fix-typo'
+
+$ vim compound_interest.py
+
+$ git add .
+git commit -m "added a new line to compound_interest.py"
+git status
+warning: in the working copy of 'merge_branches', LF will be replaced by CRLF the next time Git touches it
+[bug-fix-typo 20711f9] added a new line to compound_interest.py
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 merge_branches
+On branch bug-fix-typo
+nothing to commit, working tree clean
+
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+$ git merge bug-fix-typo
+Auto-merging compound_interest.py
+CONFLICT (content): Merge conflict in compound_interest.py
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ git push origin main
+Everything up-to-date
+
+$ git merge bug-fix-typo
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+

@@ -10,10 +10,17 @@
 
 # Output:
 # compound interest = p * (1 + r/100)^t
- # Here is a new update by <your GitHub username>
+ # Here is a new update by ranj-97
+
 
 def compound_interest(n, t, r):
     return n * (pow((1 + r / 100), t))
+=======
+print()
+def compound_interest(p, t, r):
+    return p * (pow((1 + r / 100), t))
+
+>>>>>>> bug-fix-typo
 
 if __name__ == "__main__":
     n = float(input("Enter the principal amount: "))
